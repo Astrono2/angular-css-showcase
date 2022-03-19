@@ -25,7 +25,7 @@ export class ShowcaseItemComponent implements OnInit {
 	}
 
 	get urlCSS() {
-		return this.sanitizer.bypassSecurityTrustResourceUrl(`/assets/${this.type}/${this.title}.css`);
+		return this.sanitizer.bypassSecurityTrustResourceUrl(`assets/${this.type}/${this.title}.css`);
 	}
 
 	constructor(private http: HttpClient, public sanitizer: DomSanitizer) {	}
