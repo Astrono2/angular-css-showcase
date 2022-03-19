@@ -1,0 +1,5 @@
+<div class="grid-container {{themeClass}}">
+	<app-toolbar [isThemeDark]="isThemeDark" (toggleTheme)="toggleTheme()"></app-toolbar>
+	<app-navbar [sections]="sections" [currentSection]="currentSection" (changeSection)="changeSection($event)"></app-navbar>
+	<app-main [sections]="sections" [currentSection]="currentSection"></app-main>
+</div>

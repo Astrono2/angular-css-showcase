@@ -1,0 +1,59 @@
+<link rel="stylesheet" type="text/css" [href]="urlCSS">
+
+<div class="card">
+	<div class="card-body">
+		
+		<div class="container-{{title}}" [ngSwitch]="type">
+			
+			<!-- Buttons -->
+			<button class="button-{{title}}" *ngSwitchCase="'buttons'">Button</button>
+
+			<!-- Toggles -->
+			<label class="toggle-{{title}}" *ngSwitchCase="'toggles'">
+				<input type="checkbox">
+				<span></span>
+			</label>
+
+		</div>
+
+	</div>
+	<div class="card-footer d-flex justify-content-between align-items-center">
+		<label class="title">{{title}}</label>
+		<button class="btn source" (click)="openModal()">View source</button>
+	</div>
+</div>
+
+<div class="modal" role="dialog" tabindex="-1" [ngStyle]="{'display': modalDisplay}">
+	<div class="modal-overlay" (click)="closeModal()"></div>
+
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="code">
+					<pre>
+						<code [highlight]="sourceCSS"></code>
+					</pre>
+				</div>
+				<div class="preview">
+					<div class="container-{{title}}" [ngSwitch]="type">
+			
+						<!-- Buttons -->
+						<button class="button-{{title}}" *ngSwitchCase="'buttons'">Button</button>
+
+						<!-- Toggles -->
+						<label class="toggle-{{title}}" *ngSwitchCase="'toggles'">
+							<input type="checkbox">
+							<span></span>
+						</label>
+
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer justify-content-between">
+				<h4>{{title}}</h4>
+				<button class="btn btn-danger" (click)="closeModal()">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+

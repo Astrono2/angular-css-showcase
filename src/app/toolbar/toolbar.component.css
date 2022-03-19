@@ -1,0 +1,45 @@
+.btn-toolbar {
+	padding-inline: 1.4rem;
+	padding-block: 0.5rem;
+	height: 100%;
+	background: var(--clr-primary);
+	color: var(--clr-text);
+	height: 4rem;
+}
+
+.theme-toggle {
+	font-size: 1.4rem;
+	background: none;
+	border: none;
+	color: inherit;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.theme-toggle i:not(.current) {
+	color: var(--clr-bg);
+	z-index: 1;
+	position: absolute;
+	aspect-ratio: 1;
+	width: 120%;
+	background-color: var(--clr-text);
+	border-radius: 100%;
+	transform: scale(0.0);
+	transition: transform 250ms ease;
+}
+
+.theme-toggle:hover i:not(.current) {
+	transform: scale(1.0);
+}
+
+.theme-toggle:focus-visible {
+	outline: none;
+}
+
+.theme-toggle:focus-visible i.current{
+	border-radius: 100vw;
+	outline: solid 1px var(--clr-bg);
+	outline-offset: 0.2em;
+}

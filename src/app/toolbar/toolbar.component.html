@@ -1,0 +1,7 @@
+<div class="btn-toolbar justify-content-between align-content-center">
+	<h2 class="">CSS Showcase</h2>
+	<button (click)="toggleTheme.emit()" class="theme-toggle">
+		<i class="bi bi-brightness-high-fill {{isIconCurrent(false)}}"></i>
+		<i class="bi bi-moon-fill {{isIconCurrent(true)}}"></i>
+	</button>
+</div>

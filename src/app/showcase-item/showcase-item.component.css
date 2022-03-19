@@ -1,0 +1,87 @@
+.card-body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.card {
+	background-color: var(--clr-secondary);
+	padding: 5px;
+	width: 20rem;
+	min-height: 9rem;
+}
+
+.source {
+	color: var(--clr-text);
+	background-color: var(--clr-primary);
+}
+
+.source:hover {
+	background-color: var(--clr-primary-accent);
+}
+
+.modal-dialog {
+	max-width: 80vw;
+}
+
+.modal-overlay {
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+	background-color: var(--clr-secondary);
+}
+
+.modal-body {
+	margin: 0;
+	padding: 0;
+	height: 60vh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.code, .preview {
+	width: 50%;
+}
+
+.preview {
+	height: 100%;
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+@media(max-width: 576px) {
+	.modal-body {
+		flex-direction: column;
+	}
+	.code, .preview {
+		width: unset;
+		height: 50%;
+	}
+}
+
+pre {
+	background-color: var(--bs-dark);
+	max-height: 100%;
+	min-height: 100%;
+	max-width: 100%;
+	overflow: scroll;
+}
+
+pre code {
+	background-color: inherit;
+	overflow-x: visible;
+	font-size: 0.75rem;
+}
+
+.modal-footer {
+	border: none;
+	background-color: var(--clr-primary);
+}

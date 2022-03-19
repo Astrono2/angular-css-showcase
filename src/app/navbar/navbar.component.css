@@ -1,0 +1,45 @@
+.capitalize {
+	text-transform: capitalize;
+}
+
+nav {
+	height: 100%;
+	background-color: var(--clr-secondary);
+	font-size: clamp();
+	min-width: 100px;
+}
+
+.navbar-nav {
+	width: 50%;
+}
+
+li {
+	margin-block: 5px;
+}
+
+a {
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+}
+
+a::before {
+	content: '';
+	position: absolute;
+	inset-block: 0;
+	inset-inline: -25%;
+	border-radius: 100vw;
+	background-color: #ffffff;
+	opacity: 0;
+	transition: opacity 200ms ease;
+	z-index: -1;
+}
+
+.active a:hover::before,
+a:hover::before {
+	opacity: 0.2;
+}
+
+.active a::before {
+	opacity: 0.4;
+}
