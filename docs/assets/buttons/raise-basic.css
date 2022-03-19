@@ -1,0 +1,32 @@
+/* --clr-primary is the primary color of your site */
+
+.button-raise-basic {
+	border: none;
+	padding-inline: 1em;
+	padding-block: 0.3em;
+	border-radius: 2px;
+	position: relative;
+	background-color: var(--clr-primary);
+	color: inherit;
+	transition: transform 500ms ease;
+	box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,0.1);
+}
+
+.button-raise-basic::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	transition: opacity 500ms ease;
+	box-shadow: 0 0.5rem 1rem -0.25rem rgba(0,0,0,0.3);
+}
+
+.button-raise-basic:hover,
+.button-raise-basic:focus-visible {
+	transform: translateY(-0.35em) scale(1.02);
+}
+
+.button-raise-basic:hover::before,
+.button-raise-basic:focus-visible::before {
+	opacity: 1;
+}

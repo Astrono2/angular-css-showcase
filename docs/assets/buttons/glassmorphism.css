@@ -1,0 +1,46 @@
+.container-glassmorphism {
+	position: relative;
+	width: 7em;
+	height: 3em;
+}
+
+.button-glassmorphism {
+	position: absolute;
+	border: unset;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(255,255,255,0.25);
+	box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+	border-block: 2px solid rgba(255,255,255,0.1);
+	border-radius: 100vw;
+	color: var(--clr-text);
+	z-index: 2;
+	font-weight: bold;
+	overflow: hidden;
+	transition: letter-spacing 500ms;
+}
+
+.button-glassmorphism:hover,
+.button-glassmorphism:focus-visible {
+	letter-spacing: 3px;
+}
+
+.button-glassmorphism::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to left, rgba(255,255,255,0.15), transparent);
+	transform: skewX(45deg);
+	transition: 500ms;
+}
+
+.button-glassmorphism:hover::before,
+.button-glassmorphism:focus-visible::before {
+	transform: skewX(45deg) translateX(200%);
+}

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkComponentes_Scharovsky=self.webpackChunkComponentes_Scharovsky||[]).push([[275],{275:e=>{e.exports=JSON.parse('["basic","inset","techy"]')}}]);
