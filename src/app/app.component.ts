@@ -42,11 +42,11 @@ export class AppComponent {
 	}
 
 	changeSection(section: string): void {
-		history.pushState(null, '', section);
+		history.pushState(null, '', '#' + section);
 		this.currentSection = section;
 	}
 
 	updateSectionFromURL(): void {
-		this.currentSection = location.pathname.replace('/', '') || this.currentSection;
+		this.currentSection = location.href.replace(/.*\/#?/, '') || this.currentSection;
 	}
 }
