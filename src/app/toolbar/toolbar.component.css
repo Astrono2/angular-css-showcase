@@ -16,6 +16,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-left: 0.2rem;
 }
 
 .theme-toggle i:not(.current) {
@@ -42,4 +43,47 @@
 	border-radius: 100vw;
 	outline: solid 1px var(--clr-bg);
 	outline-offset: 0.2em;
+}
+
+.info-btn {
+	color: var(--clr-text);
+	transition: transform 200ms ease;
+	position: relative;
+}
+
+.info-btn:hover,
+.info-btn:focus-visible {
+	transform: scale(1.2);
+}
+
+.info-btn:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.info {
+	position: absolute;
+	top: 3.5rem;
+	right: 3rem;
+	width: 20rem;
+	z-index: 2000;
+	visibility: hidden;
+}
+
+.info.visible {
+	visibility: visible;
+}
+
+.info .bg {
+	position: fixed;
+	inset: 0;
+	top: 4rem;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: -1;
+}
+
+.info p {
+	padding: 1rem;
+	background-color: var(--clr-secondary);
+	border-radius: 1rem;
 }

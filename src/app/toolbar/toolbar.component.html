@@ -1,7 +1,17 @@
 <div class="btn-toolbar justify-content-between align-content-center">
 	<h2 class="">CSS Showcase</h2>
-	<button (click)="toggleTheme.emit()" class="theme-toggle">
+	<div class="btn-group">
+		<button class="btn btn-lg info-btn" (click)="showInfo()">
+			<i class="bi bi-info-circle"></i>
+		</button>
+		<button (click)="toggleTheme.emit()" class="theme-toggle">
 		<i class="bi bi-brightness-high-fill {{isIconCurrent(false)}}"></i>
 		<i class="bi bi-moon-fill {{isIconCurrent(true)}}"></i>
 	</button>
+	</div>
+</div>
+
+<div class="info" #info>
+	<div class="bg" (click)="showInfo()"></div>
+	<p>This is a small Angular project made for the Coderhouse Angular course.<br><a href="https://github.com/Astrono2/angular-css-showcase">Check out the source code!</a></p>
 </div>
